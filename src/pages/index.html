@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack</title>
+    <link rel="stylesheet" href="css/blackjack.css">
+    <script src="blackjack.js"></script> 
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+        
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+ 
+
+    <!-- Additional CSS must be placed after Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    
+
+</head>
+
+<body>
+
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<img src="images/logo.jpg" id="logo"/>
+</div>
+
+</div>
+</div>
+<br><br><br>
+<a href="lobby.html" class="btn btn-warning btn-lg active" role="button" aria-pressed="true">Exit to Lobby</a>
+
+<button id ="audio" type="button"  onclick="play()">
+    <audio src="mp3s/Mozart-Serenade-in-G-major.mp3" autoplay loop></audio>
+    <img height="47" style="border-radius:8%" src="images/jukebox.jpeg" />
+
+</button>
+
+<br><br><br>
+
+<h2 style="font-family:fantasy;color:black">Dealer: <span id="dealer-sum"></h2>
+
+<br>
+<div id="dealer-cards">
+
+<img id="hidden" src="./cards/BACK.png">
+    
+</div>
+<br><br>
+
+<h2 style="font-family:fantasy;color:black">You: <span id="your-sum"></span> </h2>
+<div id="your-cards">
+
+</div>
+
+<br>
+<button id="hit" class="btn btn-primary">Hit</button>
+<button id="stay" class="btn btn-primary">Stay</button>
+
+
+<button type="submit" class="btn btn-success" onClick="refreshPage()">Restart Game</button>
+<br><br>
+<p id="results"></p>   
+
+<script>
+    function play() {
+      var audio = document.getElementById("audio");
+      audio.play();
+    }
+</script>
+</body>
+</html>
